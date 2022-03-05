@@ -11,32 +11,34 @@ class ProfileScreenBody extends StatelessWidget {
         navigationBar: const CupertinoNavigationBar(
           middle: Text('Profile Page'),
         ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Icon(
-                Icons.perm_identity_rounded,
-                size: 100,
-                color: Colors.blue,
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              CupertinoButton(
-                color: Colors.blue,
-                child: const Text('go to Next page without bottom nav'),
-                onPressed: () {
-                  Navigator.of(context, rootNavigator: true).push(
-                    CupertinoPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const CupertinoBottomNavSecondScreen(),
-                    ),
-                  );
-                },
-              ),
-            ],
+        child: Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.perm_identity_rounded,
+                  size: 100,
+                  color: Colors.blue,
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CupertinoButton(
+                  color: Colors.blue,
+                  child: const Text('go to Next page without bottom nav'),
+                  onPressed: () {
+                    Navigator.of(context, rootNavigator: true).push(
+                      CupertinoPageRoute<void>(
+                        builder: (BuildContext context) =>
+                            const CupertinoBottomNavSecondScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ));
   }

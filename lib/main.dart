@@ -1,4 +1,4 @@
-import 'package:cupertino_demo_app/cupertino_modules/cupertino_bottom_nav/cupertino_bottom_navigation_home.dart';
+import 'package:cupertino_demo_app/cupertino_modules/cupertino_widgets/cupertino_date_picker.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +11,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CupertinoBottomNavigationHome(),
+      // home: CupertinoBottomNavigationHome(),
+      home: CupertinoDatePickerWidget(),
+      // home: CupertinoWidgets(),
     );
   }
 }
